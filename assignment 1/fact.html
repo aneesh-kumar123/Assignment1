@@ -8,21 +8,21 @@
 <body>
   <script>
     //this is main function to find factorial
-    function factorial(n) {
-      if (n === 0 || n === 1) {
+    function factorial(factorialNumber) {
+      if (factorialNumber === 0 || factorialNumber === 1) {
         return 1;
       } else {
-        return n * factorial(n - 1);
+        return factorialNumber * factorial(factorialNumber - 1);
       }
     }
 
-    const number = parseInt(prompt("Enter a number:"));
-    if (isNaN(number)) {
+    const factorialNumber = parseInt(prompt("Enter a number:"));
+    if (isNaN(factorialNumber)) {
       document.write("Please enter a valid number.");
     } else {
-    const result = factorial(number);
+    const result = factorial(factorialNumber);
     
-    document.write(`The factorial of ${number} is ${result}.`);
+    document.write(`The factorial of ${factorialNumber} is ${result}.`);
     }
 
   </script>

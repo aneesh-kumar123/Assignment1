@@ -9,27 +9,27 @@
 
 <body>
   <script>
-    function fibonaciSum(num) {
-      if (num <= 0) {
+    function fibonaciSum(fabonaciiNumber) {
+      if (fabonaciiNumber <= 0) {
         return 0;
       }
-      let arr = [];
-      arr[0] = BigInt(0);
-      arr[1] = BigInt(1);
+      let arrayOfFabonacii = [];
+      arrayOfFabonacii[0] = BigInt(0);
+      arrayOfFabonacii[1] = BigInt(1);
 
-      let sum = arr[0] + arr[1];
-      for (let i = 2; i <= num; i++) {
-        arr[i] = arr[i - 1] + arr[i - 2];
-        sum += arr[i];
+      let sumOfFabonacii = arrayOfFabonacii[0] + arrayOfFabonacii[1];
+      for (let i = 2; i <= fabonaciiNumber; i++) {
+        arrayOfFabonacii[i] = arrayOfFabonacii[i - 1] + arrayOfFabonacii[i - 2];
+        sumOfFabonacii += arrayOfFabonacii[i];
       }
-      return sum;
+      return sumOfFabonacii;
 
     }
-    const number = parseInt(prompt("Enter a number upto 5000"));
-    const result = fibonaciSum(number);
+    const fabonaciiNumber = parseInt(prompt("Enter a number upto 5000"));
+    const result = fibonaciSum(fabonaciiNumber);
 
 
-    document.write(`The sum of the first ${number} numbers in the Fibonacci sequence is ${result}.`);
+    document.write(`The sum of the first ${fabonaciiNumber} numbers in the Fibonacci sequence is ${result}.`);
 
 
   </script>

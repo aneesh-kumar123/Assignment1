@@ -7,27 +7,27 @@
 </head>
 <body>
   <script>
-    function isArmstrong(num) {
+    function isArmstrong(armstrongNumber) {
       let sum = 0;
-      let temp = num;
-      let digits = temp.toString().length;
-      while (temp > 0) {
-        let digit = temp % 10;
-        sum += Math.pow(digit, digits);
-        temp = Math.floor(temp / 10);
+      let tempNumber = armstrongNumber;
+      let totalDigits = tempNumber.toString().length;
+      while (tempNumber > 0) {
+        let lastDigit = tempNumber % 10;
+        sum += Math.pow(lastDigit, totalDigits);
+        tempNumber = Math.floor(tempNumber / 10);
       }
-      return num === sum;
+      return armstrongNumber === sum;
     }
 
-    const number=parseInt(prompt("Enter a number to print armstrong number upto 100000"));
+    const armstrongNumber=parseInt(prompt("Enter a number to print armstrong number upto 100000"));
     let count=0;
-    for (let i = 1; i <= number; i++) {
+    for (let i = 1; i <= armstrongNumber; i++) {
       if (isArmstrong(i)) {
         count++;
         document.write(`The ${i} is armstrong number <br>`);
       }
     }
-    document.write(`Toatl ${count} armstrong number are there in ${number}`)
+    document.write(`Toatl ${count} armstrong number are there in ${armstrongNumber}`)
     
 
   </script>

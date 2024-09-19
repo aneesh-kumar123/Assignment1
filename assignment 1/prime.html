@@ -7,15 +7,15 @@
 </head>
 <body>
   <script>
-    function isPrime(num)
+    function isPrime(primeNum)
     {
-      if (num<=1)
+      if (primeNum<=1)
       {
         return false
       }
-      for (let i=2; i<num; i++)
+      for (let i=2; i<primeNum; i++)
       {
-        if(num%i==0)
+        if(primeNum%i==0)
         {
           return false
         }
@@ -23,11 +23,11 @@
       return true
     }
         
-    let num = parseInt(prompt("Enter a number:"));
-    if (isPrime(num)) {
-      document.write(num + " is a prime number.");
+    let primeNum = parseInt(prompt("Enter a number:"));
+    if (isPrime(primeNum)) {
+      document.write(primeNum + " is a prime number.");
     } else {
-      document.write(num + " is not a prime number.");
+      document.write(primeNum + " is not a prime number.");
     }
         
   </script>

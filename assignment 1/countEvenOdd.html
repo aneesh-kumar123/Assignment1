@@ -3,28 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>count even odd zero from array</title>
+  <title>count evenCount oddCount zeroCount from arrayOfNumberay</title>
 </head>
 <body>
   <script>
-    let arr = [1, 2, 0, 3, 4, 5, 6, 7, 8, 9, 10, 0];
-    let even = 0;
-    let odd = 0;
-    let zero = 0;
+    let arrayOfNumber = [1, 2, 0, 3, 4, 5, 6, 7, 8, 9, 10, 0];
+    let evenCount = 0;
+    let oddCount = 0;
+    let zeroCount = 0;
 
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i] % 2 === 0 && arr[i]>0) {
-        even++;
-      } else if (arr[i] % 2 !== 0) {
-        odd++;
+    for (let i = 0; i < arrayOfNumber.length; i++) {
+      if (arrayOfNumber[i] % 2 === 0 && arrayOfNumber[i]>0) {
+        evenCount++;
+      } else if (arrayOfNumber[i] % 2 !== 0) {
+        oddCount++;
       } else {
-        zero++;
+        zeroCount++;
       }
     }
-    document.write(`The given array is =${arr} <br>`)
-    document.write(`The count of Even number is= ${even} <br> 
-    The count of Odd number is= ${odd} <br>
-    The count of Zero number is= ${zero}`);
+    document.write(`The given arrayOfNumberay is =${arrayOfNumber} <br>`)
+    document.write(`The count of evenCount number is= ${evenCount} <br> 
+    The count of oddCount number is= ${oddCount} <br>
+    The count of zeroCount number is= ${zeroCount}`);
 
 
   </script>
