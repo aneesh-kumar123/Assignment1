@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> print Armstrong Number</title>
+</head>
+<body>
+  <script>
+    function isArmstrong(num) {
+      let sum = 0;
+      let temp = num;
+      let digits = temp.toString().length;
+      while (temp > 0) {
+        let digit = temp % 10;
+        sum += Math.pow(digit, digits);
+        temp = Math.floor(temp / 10);
+      }
+      return num === sum;
+    }
+
+    const number=parseInt(prompt("Enter a number to print armstrong number upto 100000"));
+    let count=0;
+    for (let i = 1; i <= number; i++) {
+      if (isArmstrong(i)) {
+        count++;
+        document.write(`The ${i} is armstrong number <br>`);
+      }
+    }
+    document.write(`Toatl ${count} armstrong number are there in ${number}`)
+    
+
+  </script>
+</body>
+</html>

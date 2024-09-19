@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> fibonaci sum</title>
+</head>
+
+<body>
+  <script>
+    function fibonaciSum(num) {
+      if (num <= 0) {
+        return 0;
+      }
+      let arr = [];
+      arr[0] = BigInt(0);
+      arr[1] = BigInt(1);
+
+      let sum = arr[0] + arr[1];
+      for (let i = 2; i <= num; i++) {
+        arr[i] = arr[i - 1] + arr[i - 2];
+        sum += arr[i];
+      }
+      return sum;
+
+    }
+    const number = parseInt(prompt("Enter a number upto 5000"));
+    const result = fibonaciSum(number);
+
+
+    document.write(`The sum of the first ${number} numbers in the Fibonacci sequence is ${result}.`);
+
+
+  </script>
+
+</body>
+
+</html>
